@@ -61,9 +61,19 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
           className={`object-cover transition-opacity duration-500 ease-out ${
-            isHovered && isInView ? "opacity-0" : "opacity-100"
+            isHovered && isInView && project.video ? "opacity-0" : "opacity-100"
           }`}
         />
+        {project.embedUrl && (
+          <button
+            type="button"
+            onClick={() => setIsPreviewOpen(true)}
+            className="absolute left-4 top-4 z-10 inline-flex items-center gap-2 rounded-full border border-border bg-background/90 px-3 py-2 text-xs uppercase tracking-[0.16em] text-text transition hover:border-accent hover:text-accent"
+          >
+            <ExternalLink size={14} />
+            Preview
+          </button>
+        )}
         {isInView && project.video && (
           <video
             ref={videoRef}
@@ -96,7 +106,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </div>
 
-        <div className="flex gap-4">
+        <div className="flex flex-wrap gap-4">
           <Link
             href={project.liveUrl}
             aria-label={`${project.name} live site`}
@@ -115,6 +125,26 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </Link>
         </div>
       </div>
+
+      {project.embedUrl && isPreviewOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 px-4 py-6 backdrop-blur-sm">
+          <div className="relative w-full max-w-5xl overflow-hidden rounded-3xl border border-border bg-background">
+            <button
+              type="button"
+              onClick={() => setIsPreviewOpen(false)}
+              className="absolute right-4 top-4 z-20 inline-flex items-center gap-2 rounded-full border border-border bg-background/95 px-3 py-2 text-xs uppercase tracking-[0.16em] text-text transition hover:border-accent hover:text-accent"
+            >
+              Close
+            </button>
+            <iframe
+              src={project.embedUrl}
+              title={`${project.name} live preview`}
+              className="h-[70vh] w-full border-0"
+              allow="autoplay; fullscreen; microphoning; camera"
+            />
+          </div>
+        </div>
+      )}
     </article>
   );
 }
