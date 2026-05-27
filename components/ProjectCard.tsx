@@ -125,14 +125,16 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         <div className="flex flex-wrap gap-4">
-          <Link
-            href={project.liveUrl}
-            aria-label={`${project.name} live site`}
-            className="inline-flex items-center gap-2 text-sm text-text/80 transition hover:text-accent"
-          >
-            <ExternalLink size={16} />
-            Live
-          </Link>
+          {project.liveUrl && project.liveUrl !== "#" ? (
+            <Link
+              href={project.liveUrl}
+              aria-label={`${project.name} live site`}
+              className="inline-flex items-center gap-2 text-sm text-text/80 transition hover:text-accent"
+            >
+              <ExternalLink size={16} />
+              Live
+            </Link>
+          ) : null}
           <Link
             href={project.githubUrl}
             aria-label={`${project.name} GitHub repository`}
