@@ -5,6 +5,7 @@ export type Project = {
   stack: string[];
   image: string;
   video?: string;
+  embedUrl?: string;
   liveUrl: string;
   githubUrl: string;
 };
@@ -25,6 +26,7 @@ export const projects: Project[] = [
       "Vercel",
     ],
     image: "/projects/azbir/azbirclothing.JPG",
+    embedUrl: "https://azbirclothing.vercel.app/",
     liveUrl: "https://azbirclothing.vercel.app/",
     githubUrl: "#",
   },
@@ -45,6 +47,7 @@ export const projects: Project[] = [
       "Digital illustrator and motion artist showcase site featuring cinematic visuals, animation previews, and brand-led storytelling.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
     image: "/projects/cerdeeqtoonz/Cerdeeqtoonz.art.JPG",
+    embedUrl: "https://cerdeeqtoonz.art/",
     liveUrl: "https://cerdeeqtoonz.art/",
     githubUrl: "#",
   },
