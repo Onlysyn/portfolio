@@ -71,7 +71,7 @@ export const projects: Project[] = [
     name: "Mamman High",
     role: "Frontend (personal project)",
     description:
-      "Trust Meets Innovation — Nexus Fintech simplifies the complexity of Decentralized Finance. Secure, transparent, and built for the future of digital assets.",
+      "A Student Information Management System (SIMS) designed to streamline school administration. Teachers can upload results and manage class records, administrators and principals can monitor student performance and faculty data centrally, and parents can securely view report cards and attendance. Includes role-based access, centralized record keeping, and reporting tools for school leaders.",
     stack: ["HTML", "CSS", "JavaScript"],
     image: "/projects/MammanHigh/Capture.JPG",
     liveUrl: "#",
