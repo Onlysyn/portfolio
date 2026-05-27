@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Mail, Phone } from "lucide-react";
+import { ExternalLink, Mail, Phone } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -45,7 +45,7 @@ export default function Contact() {
           target="_blank"
           rel="noreferrer"
         >
-          <Github size={18} /> github.com/onlysyn
+          <ExternalLink size={18} /> github.com/onlysyn
         </a>
       </motion.div>
     </motion.section>

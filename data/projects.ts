@@ -4,7 +4,7 @@ export type Project = {
   description: string;
   stack: string[];
   image: string;
-  video: string;
+  video?: string;
   liveUrl: string;
   githubUrl: string;
 };
@@ -24,9 +24,8 @@ export const projects: Project[] = [
       "Formspree",
       "Vercel",
     ],
-    image: "/projects/azbir/preview.jpg",
-    video: "/projects/azbir/preview.mp4",
-    liveUrl: "#",
+    image: "/projects/azbir/azbirclothing.JPG",
+    liveUrl: "https://azbirclothing.vercel.app/",
     githubUrl: "#",
   },
   {
@@ -35,9 +34,18 @@ export const projects: Project[] = [
     description:
       "Data-heavy dashboard for thread analytics, charting, and PDF export workflows.",
     stack: ["HTML", "CSS", "JavaScript", "Supabase", "Chart.js", "jsPDF", "Vercel"],
-    image: "/projects/threadx/preview.jpg",
-    video: "/projects/threadx/preview.mp4",
+    image: "/projects/threadx/thredx.JPG",
     liveUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    id: "cerdeeqtoonz",
+    name: "Cerdeeqtoonz.art",
+    description:
+      "Digital illustrator and motion artist showcase site featuring cinematic visuals, animation previews, and brand-led storytelling.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
+    image: "/projects/cerdeeqtoonz/Cerdeeqtoonz.art.JPG",
+    liveUrl: "https://cerdeeqtoonz.art/",
     githubUrl: "#",
   },
 ];

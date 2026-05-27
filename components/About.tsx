@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Mail, Phone } from "lucide-react";
 
@@ -74,8 +75,23 @@ export default function About() {
       <motion.div
         variants={fadeUp}
         transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-        className="border border-border bg-background/80 p-5"
+        className="space-y-5 border border-border bg-background/80 p-5"
       >
+        <div className="overflow-hidden rounded-3xl border border-border bg-background/70">
+          <div className="relative aspect-[4/5]">
+            <Image
+              src="/pic.jpg"
+              alt="Usman Musa Usman"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="border-t border-border px-4 py-3 text-sm text-text/80">
+            Usman Musa Usman — frontend developer and founder of Sentratech Labs.
+          </div>
+        </div>
+
         <div className="mb-4 flex items-center justify-between font-[var(--font-heading)] text-xs uppercase tracking-[0.12em] text-text/60">
           <span>Contribution activity</span>
           <span className="text-accent">2025 — 2026</span>

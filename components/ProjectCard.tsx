@@ -63,7 +63,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             isHovered && isInView ? "opacity-0" : "opacity-100"
           }`}
         />
-        {isInView && (
+        {isInView && project.video && (
           <video
             ref={videoRef}
             src={project.video}
