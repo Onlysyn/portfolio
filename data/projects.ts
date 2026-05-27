@@ -30,7 +30,7 @@ export const projects: Project[] = [
     image: "/projects/azbir/azbirclothing.JPG",
     embedUrl: "https://azbirclothing.vercel.app/",
     liveUrl: "https://azbirclothing.vercel.app/",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Onlysyn/Azbirclothing",
   },
   {
     id: "threadx",
@@ -54,5 +54,27 @@ export const projects: Project[] = [
     embedUrl: "https://cerdeeqtoonz.art/",
     liveUrl: "https://cerdeeqtoonz.art/",
     githubUrl: "#",
+  },
+  {
+    id: "nexusfintech",
+    name: "NexusFintech",
+    role: "UI design & frontend build",
+    description:
+      "Trust Meets Innovation — Nexus Fintech simplifies the complexity of Decentralized Finance. Secure, transparent, and built for the future of digital assets. Includes an ecosystem explorer with BTC/ETH/SOL tracker UI.",
+    stack: ["HTML", "CSS", "JavaScript"],
+    image: "/projects/nexusfintech/preview.jpg",
+    liveUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    id: "mammanhigh",
+    name: "Mamman High",
+    role: "Frontend (personal project)",
+    description:
+      "Trust Meets Innovation — Nexus Fintech simplifies the complexity of Decentralized Finance. Secure, transparent, and built for the future of digital assets.",
+    stack: ["HTML", "CSS", "JavaScript"],
+    image: "/projects/MammanHigh/Capture.JPG",
+    liveUrl: "#",
+    githubUrl: "https://github.com/Onlysyn/Dan-Mamman-High",
   },
 ];
