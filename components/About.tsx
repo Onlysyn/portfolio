@@ -75,7 +75,7 @@ export default function About() {
       <motion.div
         variants={fadeUp}
         transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-        className="space-y-5 border border-border bg-background/80 p-5"
+        className="space-y-6 border border-border bg-background/80 p-5"
       >
         <div className="overflow-hidden rounded-3xl border border-border bg-background/70">
           <div className="relative aspect-[4/5]">
@@ -92,25 +92,20 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mb-4 flex items-center justify-between font-[var(--font-heading)] text-xs uppercase tracking-[0.12em] text-text/60">
-          <span>Contribution activity</span>
-          <span className="text-accent">2025 — 2026</span>
-        </div>
-        <div className="grid grid-cols-12 gap-[3px]">
-          {contributionLevels.map((level, idx) => (
-            <div
-              key={idx}
-              className={`aspect-square rounded-[2px] ${levelClass[level]}`}
-              aria-hidden
-            />
-          ))}
-        </div>
-        <div className="mt-4 flex items-center justify-end gap-1.5 font-[var(--font-heading)] text-[10px] uppercase tracking-[0.1em] text-text/50">
-          <span>Less</span>
-          {[0, 1, 2, 3].map((level) => (
-            <div key={level} className={`h-3 w-3 rounded-[2px] ${levelClass[level]}`} />
-          ))}
-          <span>More</span>
+        <div className="rounded-3xl border border-border bg-background/90 p-5">
+          <div className="mb-4 flex items-center justify-between text-xs uppercase tracking-[0.18em] text-text/60">
+            <span>Recent workflow</span>
+            <span className="text-accent">JS / TS</span>
+          </div>
+          <pre className="overflow-x-auto rounded-2xl bg-background/50 p-4 text-sm leading-loose text-text/80">
+            <code>
+              {`const project = {
+  title: "Azbir Website",
+  stack: ["Next.js", "Tailwind", "Framer Motion"],
+  focus: "clean UI, fast interactions, polished animation",
+};`}
+            </code>
+          </pre>
         </div>
       </motion.div>
     </motion.section>

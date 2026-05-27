@@ -64,6 +64,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             isHovered && isInView && project.video ? "opacity-0" : "opacity-100"
           }`}
         />
+        <div className="absolute right-4 top-4 z-10 inline-flex items-center gap-2 rounded-full border border-border bg-background/90 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-text/70">
+          {project.embedUrl ? "Live preview" : "Static screenshot"}
+        </div>
         {project.embedUrl && (
           <button
             type="button"
@@ -92,7 +95,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div className="space-y-4 p-5">
         <div>
           <h3 className="font-[var(--font-heading)] text-xl">{project.name}</h3>
-          <p className="mt-2 text-sm leading-relaxed text-text/75">{project.description}</p>
+          {project.role ? (
+            <p className="mt-1 text-xs uppercase tracking-[0.18em] text-text/60">
+              {project.role}
+            </p>
+          ) : null}
+          <p className="mt-3 text-sm leading-relaxed text-text/75">{project.description}</p>
         </div>
 
         <div className="flex flex-wrap gap-2">

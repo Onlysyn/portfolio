@@ -1,6 +1,7 @@
 export type Project = {
   id: string;
   name: string;
+  role?: string;
   description: string;
   stack: string[];
   image: string;
@@ -14,6 +15,7 @@ export const projects: Project[] = [
   {
     id: "azbir",
     name: "Azbir Website",
+    role: "Frontend development & motion",
     description:
       "Content-driven marketing site with CMS-backed pages, smooth motion, and form handling.",
     stack: [
@@ -33,6 +35,7 @@ export const projects: Project[] = [
   {
     id: "threadx",
     name: "Thread X Dashboard",
+    role: "Dashboard UI & data interactions",
     description:
       "Data-heavy dashboard for thread analytics, charting, and PDF export workflows.",
     stack: ["HTML", "CSS", "JavaScript", "Supabase", "Chart.js", "jsPDF", "Vercel"],
@@ -43,6 +46,7 @@ export const projects: Project[] = [
   {
     id: "cerdeeqtoonz",
     name: "Cerdeeqtoonz.art",
+    role: "Creative web showcase",
     description:
       "Digital illustrator and motion artist showcase site featuring cinematic visuals, animation previews, and brand-led storytelling.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],

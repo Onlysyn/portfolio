@@ -19,14 +19,28 @@ const headingFont = Space_Mono({
 export const metadata: Metadata = {
   title: "Usman Musa Usman | Frontend Developer Portfolio",
   description:
-    "Portfolio of Usman Musa Usman (Synn), a frontend developer building clean, functional interfaces and products.",
+    "Portfolio of Usman Musa Usman (Synn), a frontend developer delivering polished websites, motion-driven interfaces, and product-focused dashboards.",
+  keywords: [
+    "frontend developer",
+    "Next.js",
+    "Tailwind CSS",
+    "Framer Motion",
+    "portfolio",
+    "Sentratech Labs",
+  ],
   openGraph: {
     title: "Usman Musa Usman | Frontend Developer Portfolio",
     description:
-      "Frontend developer and founder of Sentratech Labs. Explore selected projects, skills, and contact details.",
+      "Frontend developer and founder of Sentratech Labs. Explore selected work in web products, dashboards, and motion-led brand sites.",
     url: "https://usmanmusausman.vercel.app",
-    siteName: "Usman Musa Usman Portfolio",
+    siteName: "Synn Portfolio",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Usman Musa Usman | Frontend Developer Portfolio",
+    description:
+      "Frontend developer and founder of Sentratech Labs. Explore selected work in web products, dashboards, and motion-led brand sites.",
   },
 };
 
