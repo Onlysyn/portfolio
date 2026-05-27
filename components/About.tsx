@@ -97,15 +97,20 @@ export default function About() {
             <span>Recent workflow</span>
             <span className="text-accent">JS / TS</span>
           </div>
-          <pre className="overflow-x-auto rounded-2xl bg-background/50 p-4 text-sm leading-loose text-text/80">
-            <code>
-              {`const project = {
-  title: "Azbir Website",
-  stack: ["Next.js", "Tailwind", "Framer Motion"],
-  focus: "clean UI, fast interactions, polished animation",
-};`}
-            </code>
-          </pre>
+          <div className="space-y-3 text-sm text-text/80">
+            <div>
+              <p className="text-xs uppercase tracking-[0.16em] text-text/60">Project</p>
+              <p className="mt-1 text-sm">Azbir Website</p>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-[0.16em] text-text/60">Stack</p>
+              <p className="mt-1 text-sm">Next.js · Tailwind · Framer Motion</p>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-[0.16em] text-text/60">Focus</p>
+              <p className="mt-1 text-sm">Clean UI, fast interactions, polished animation</p>
+            </div>
+          </div>
         </div>
       </motion.div>
     </motion.section>
