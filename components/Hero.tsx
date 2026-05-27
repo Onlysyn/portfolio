@@ -3,14 +3,6 @@
 import { motion } from "framer-motion";
 
 export default function Hero() {
-  const handleScrollToWork = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-    const target = document.querySelector("#work");
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
-
   return (
     <section
       id="hero"
@@ -56,7 +48,6 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, ease: "easeOut", delay: 0.36 }}
           href="#work"
-          onClick={handleScrollToWork}
           className="inline-block border border-accent px-6 py-3 font-[var(--font-heading)] text-xs uppercase tracking-[0.16em] text-accent transition hover:bg-accent hover:text-background"
         >
           View Work
