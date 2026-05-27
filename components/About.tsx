@@ -40,7 +40,7 @@ export default function About() {
         <div className="space-y-4 text-text/85">
           <p>
             Frontend developer with a thing for clean code and even cleaner UIs. I&apos;ve shipped
-            production projects across different industries — from content-driven websites to
+            production projects across different industries from content-driven websites to
             data-heavy dashboards. I care about the details most people skip: load states,
             transitions, the way a button feels when you click it.
           </p>

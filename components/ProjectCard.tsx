@@ -17,6 +17,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
 
+  const previewLabel = project.embedUrl
+    ? "Live preview"
+    : project.video
+    ? "Video preview"
+    : "Static screenshot";
+
   useEffect(() => {
     const node = cardRef.current;
     if (!node) return;
@@ -64,9 +70,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             isHovered && isInView && project.video ? "opacity-0" : "opacity-100"
           }`}
         />
-        <div className="absolute right-4 top-4 z-10 inline-flex items-center gap-2 rounded-full border border-border bg-background/90 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-text/70">
-          {project.embedUrl ? "Live preview" : "Static screenshot"}
-        </div>
         {project.embedUrl && (
           <button
             type="button"
@@ -94,12 +97,19 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
       <div className="space-y-4 p-5">
         <div>
-          <h3 className="font-[var(--font-heading)] text-xl">{project.name}</h3>
-          {project.role ? (
-            <p className="mt-1 text-xs uppercase tracking-[0.18em] text-text/60">
-              {project.role}
-            </p>
-          ) : null}
+          <div className="flex flex-col gap-2">
+            <div>
+              <h3 className="font-[var(--font-heading)] text-xl">{project.name}</h3>
+              {project.role ? (
+                <p className="mt-1 text-xs uppercase tracking-[0.18em] text-text/60">
+                  {project.role}
+                </p>
+              ) : null}
+            </div>
+            <span className="inline-flex items-center rounded-full border border-border bg-background/90 px-2.5 py-1 text-[10px] uppercase tracking-[0.16em] text-text/70">
+              {previewLabel}
+            </span>
+          </div>
           <p className="mt-3 text-sm leading-relaxed text-text/75">{project.description}</p>
         </div>
 
